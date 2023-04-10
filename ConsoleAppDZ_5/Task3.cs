@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppDZ_5
 {
-    class BookList
+    class Book
     {
         private List<string> books = new List<string>();
 
@@ -36,13 +36,13 @@ namespace ConsoleAppDZ_5
             set { books[index] = value; }
         }
 
-        public static BookList operator +(BookList bookList, string book)
+        public static Book operator +(Book bookList, string book)
         {
             bookList.Add(book);
             return bookList;
         }
 
-        public static BookList operator -(BookList bookList, string book)
+        public static Book operator -(Book bookList, string book)
         {
             bookList.Remove(book);
             return bookList;

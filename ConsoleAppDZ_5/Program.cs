@@ -99,7 +99,7 @@
                         }
                         break;
                     case 3:
-                        BookList bookList = new BookList();
+                        Book book = new Book();
                         do
                         {
                             Console.WriteLine("Menu:\n1 - Add book\n2 - Remove book\n3 - Check book in list\n4 - Show the number of book in list\n5 - Show a list of book\n0 - Exit");
@@ -111,19 +111,19 @@
                                 case 1:
                                     Console.Write("\nEnter name of book: ");
                                     string add = Console.ReadLine();
-                                    bookList.Add(add);
+                                    book.Add(add);
                                     Console.WriteLine("Book '" + add + "' add .");
                                     break;
                                 case 2:
                                     Console.Write("\nEnter name of book: ");
                                     string remove = Console.ReadLine();
-                                    bookList.Remove(remove);
+                                    book.Remove(remove);
                                     Console.WriteLine("Book '" + remove + "' remove.");
                                     break;
                                 case 3:
                                     Console.Write("\nEnter name of book: ");
                                     string find = Console.ReadLine();
-                                    if (bookList.Contains(find))
+                                    if (book.Contains(find))
                                     {
                                         Console.WriteLine("Book '" + find + "' available");
                                     }
@@ -133,13 +133,13 @@
                                     }
                                     break;
                                 case 4:
-                                    Console.WriteLine("\nNumber of book : " + bookList.Count);
+                                    Console.WriteLine("\nNumber of book : " + book.Count);
                                     break;
                                 case 5:
                                     Console.WriteLine("\nList of book:");
-                                    for (int i = 0; i < bookList.Count; i++)
+                                    for (int i = 0; i < book.Count; i++)
                                     {
-                                        Console.WriteLine((i + 1) + " - " + bookList[i]);
+                                        Console.WriteLine((i + 1) + " - " + book[i]);
                                     }
                                     break;
                                 case 0:
